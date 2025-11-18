@@ -1,0 +1,66 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
+
+export default function AboutMe() {
+  return (
+    <section className='section' id='aboutMe'>
+      <div className='container content'>
+        <nav className='level'>
+          <div className='level-left'>
+            <h3 className='title is-2'>Sobre Mi</h3>
+          </div>
+          <div className='level-right'>
+            <h3 className='title is-2'>
+              <FontAwesomeIcon icon={faUserAstronaut} />
+            </h3>
+          </div>
+        </nav>
+        <h4 className='subtitle is-5'>
+          Fundador de Bits & Code, una consultora de software boutique.
+        </h4>
+        <p>
+          Con{' '}
+          <span className='has-text-weight-bold'>
+            más de 15 años de experiencia
+          </span>
+          , mi enfoque es la{' '}
+          <span className='has-text-weight-bold'>
+            solución a problemas complejos
+          </span>{' '}
+          y la construcción de sistemas robustos.
+        </p>
+        <ul>
+          <li>
+            <span className='has-text-weight-bold'>Experiencia Técnica:</span>{' '}
+            Domino las arquitecturas modernas con{' '}
+            <span className='has-text-weight-bold'>TypeScript</span> para
+            soluciones full-stack flexibles y{' '}
+            <span className='has-text-weight-bold'>Java</span> para sistemas
+            empresariales de alto rendimiento.
+          </li>
+          <li>
+            <span className='has-text-weight-bold'>Rigor Metodológico:</span> Mi
+            rol como <span className='has-text-weight-bold'>profesor</span>{' '}
+            universitario de programación asegura que cada proyecto se
+            desarrolla aplicando rigurosamente{' '}
+            <span className='has-text-weight-bold'>
+              buenas prácticas de programación
+            </span>
+            , garantizando así la{' '}
+            <span className='has-text-weight-bold'>mantenibilidad</span> del
+            código a largo plazo.
+          </li>
+        </ul>
+        <p>
+          Vivo en Chile 🇨🇱 y mis servicios de desarrollo y consultoría están
+          disponibles para clientes en todo el mundo.
+        </p>
+        <div className='notification is-success is-light'>
+          ¿Listo para construir su próximo sistema escalable?{' '}
+          <Link href='#contact'>Ir a Contacto</Link>
+        </div>
+      </div>
+    </section>
+  );
+}

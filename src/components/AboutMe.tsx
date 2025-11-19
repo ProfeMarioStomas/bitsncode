@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
+import { faRocket, faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import Icon from '@/components/ui/Icon';
 
 export default function AboutMe() {
   return (
@@ -56,9 +57,14 @@ export default function AboutMe() {
           Vivo en Chile 🇨🇱 y mis servicios de desarrollo y consultoría están
           disponibles para clientes en todo el mundo.
         </p>
-        <div className='notification is-success is-light'>
+        <div className='notification is-success is-light is-flex is-align-items-center is-gap-3'>
           ¿Listo para construir su próximo sistema escalable?{' '}
-          <Link href='#contact'>Ir a Contacto</Link>
+          <Link href='#contact' className='button is-primary'>
+            <Icon
+              text='Ir a Contacto'
+              icon={<FontAwesomeIcon icon={faRocket} />}
+            />
+          </Link>
         </div>
       </div>
     </section>

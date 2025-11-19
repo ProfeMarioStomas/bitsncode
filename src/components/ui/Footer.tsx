@@ -6,7 +6,7 @@ export default function Footer() {
       <div className='content has-text-centered'>
         <p>
           Hecho en Chile 🇨🇱 | © {new Date().getFullYear()} |{' '}
-          <span className='has-text-weight-bold'>Bits & Code</span>
+          <span className='has-text-weight-bold'>Bits & Code</span> 🚀
         </p>
         <Link href='https://bulma.io' target='_blank'>
           <img

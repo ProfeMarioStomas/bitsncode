@@ -1,5 +1,6 @@
 import { faHandshake } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
 
 export default function Services() {
   return (
@@ -21,7 +22,20 @@ export default function Services() {
           servicios tecnológicos. En su lugar, nos enfocamos en un{' '}
           <span className='has-text-weight-bold'>servicio personalizado</span>
         </div>
-        <div className='columns'>
+        <div className='columns is-align-items-center'>
+          <div className='column is-4'>
+            <div className='box'>
+              <figure className='image is-square'>
+                <Image
+                  src='/cloud.png'
+                  alt='ia generated image cloud'
+                  fill
+                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                  priority
+                />
+              </figure>
+            </div>
+          </div>
           <div className='column'>
             <div className='box'>
               <h4 className='title is-5'>Desarrollo Aplicaciones Web</h4>
@@ -54,7 +68,7 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div className='columns'>
+        <div className='columns is-align-items-center'>
           <div className='column'>
             <div className='box'>
               <h4 className='title is-5'>
@@ -118,8 +132,34 @@ export default function Services() {
               </div>
             </div>
           </div>
+          <div className='column is-4'>
+            <div className='box'>
+              <figure className='image is-square'>
+                <Image
+                  src='/ecommerce.png'
+                  alt='ia generated image ecommerce'
+                  fill
+                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                  priority
+                />
+              </figure>
+            </div>
+          </div>
         </div>
-        <div className='columns'>
+        <div className='columns is-align-items-center'>
+          <div className='column is-4'>
+            <div className='box'>
+              <figure className='image is-square'>
+                <Image
+                  src='/cloud.png'
+                  alt='ia generated image cloud'
+                  fill
+                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                  priority
+                />
+              </figure>
+            </div>
+          </div>
           <div className='column'>
             <div className='box'>
               <h4 className='title is-5'>

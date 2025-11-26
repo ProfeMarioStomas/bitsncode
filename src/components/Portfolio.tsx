@@ -43,7 +43,7 @@ export default function Portfolio() {
               <span className='has-text-weight-bold'>
                 administración centralizada
               </span>{' '}
-              del registro de miembros y el seguimiento detallado del estado de
+              del registro de miembros y el seguimiento detallado del estado de{' '}
               sus{' '}
               <span className='has-text-weight-bold'>
                 cuotas, pagos y morosidad

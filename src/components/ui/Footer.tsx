@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -9,11 +10,11 @@ export default function Footer() {
           <span className='has-text-weight-bold'>Bits & Code</span> 🚀
         </p>
         <Link href='https://bulma.io' target='_blank'>
-          <img
+          <Image
             src='https://bulma.io/assets/images/made-with-bulma.png'
             alt='Made with Bulma'
-            width='128'
-            height='24'
+            width={128}
+            height={24}
           />
         </Link>
       </div>

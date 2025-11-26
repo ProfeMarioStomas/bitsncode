@@ -1,13 +1,12 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const RESEND_API_KEY = process.env.RESEND_API_KEY;
-const HCAPTCHA_SECRET_KEY = process.env.HCAPTCHA_SECRET_KEY;
-const resend = new Resend(RESEND_API_KEY);
 const TO_EMAIL = 'contacto@bitsncode.dev';
 const FROM_EMAIL = 'hola@bitsncode.dev';
 
 async function verifyHcaptcha(token: string) {
+  const HCAPTCHA_SECRET_KEY = process.env.HCAPTCHA_SECRET_KEY;
+
   const url = `https://hcaptcha.com/siteverify`;
   const response = await fetch(url, {
     method: 'POST',
@@ -52,6 +51,8 @@ export async function POST(request: Request) {
   }
 
   try {
+    const RESEND_API_KEY = process.env.RESEND_API_KEY;
+    const resend = new Resend(RESEND_API_KEY);
     const response = await resend.emails.send({
       from: FROM_EMAIL,
       to: TO_EMAIL,

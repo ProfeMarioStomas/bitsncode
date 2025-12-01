@@ -19,7 +19,7 @@ export default function AboutMe() {
           </div>
         </nav>
         <div className='columns'>
-          <div className='column is-4'>
+          <div className='column is-3'>
             <figure className='image is-square'>
               <Image
                 src='/aboutMe.png'

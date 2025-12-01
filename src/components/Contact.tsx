@@ -7,26 +7,28 @@ export default function Contact() {
 
   return (
     <section className='section' id='contact'>
-      <nav className='level'>
-        <div className='level-left'>
-          <h3 className='title is-2'>Contacto</h3>
-        </div>
-        <div className='level-right'>
-          <h3 className='title is-2'>
-            <FontAwesomeIcon icon={faAddressBook} />
-          </h3>
-        </div>
-      </nav>
-      <h4 className='subtitle is-5'>
-        ¿Algo en lo que necesites apoyo? Escríbeme!
-      </h4>
-      {HCAPTCHA_SITE_KEY ? (
-        <ContactForm HCAPTCHA_SITE_KEY={HCAPTCHA_SITE_KEY} />
-      ) : (
-        <div className='information is-danger is-light'>
-          Formulario deshabilitado momentáneamente
-        </div>
-      )}
+      <div className='container content'>
+        <nav className='level'>
+          <div className='level-left'>
+            <h3 className='title is-2'>Contacto</h3>
+          </div>
+          <div className='level-right'>
+            <h3 className='title is-2'>
+              <FontAwesomeIcon icon={faAddressBook} />
+            </h3>
+          </div>
+        </nav>
+        <h4 className='subtitle is-5'>
+          ¿Algo en lo que necesites apoyo? Escríbeme!
+        </h4>
+        {HCAPTCHA_SITE_KEY ? (
+          <ContactForm HCAPTCHA_SITE_KEY={HCAPTCHA_SITE_KEY} />
+        ) : (
+          <div className='information is-danger is-light'>
+            Formulario deshabilitado momentáneamente
+          </div>
+        )}
+      </div>
     </section>
   );
 }

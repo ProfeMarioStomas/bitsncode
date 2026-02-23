@@ -73,7 +73,7 @@ export default function RootLayout({
   return (
     <html lang='es' className='has-navbar-fixed-top'>
       <head>
-        <link rel='icon' href='/favicon.svg' type='image/svg+xml'></link>
+        <link rel='icon' href='/favicon.ico' type='image/svg+xml'></link>
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{

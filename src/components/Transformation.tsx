@@ -23,7 +23,7 @@ export default function Transformation() {
               <Icon icon={<FontAwesomeIcon icon={faClock} />} />
             </button>
             <h2 className='title is-6'>TIEMPO DE REPORTE</h2>
-            <h4 className='title is-4'>3 días</h4>
+            <h3 className='title is-4'>3 días</h3>
           </div>
         </div>
         <div className='column'>
@@ -32,7 +32,7 @@ export default function Transformation() {
               <Icon icon={<FontAwesomeIcon icon={faExclamation} />} />
             </button>
             <h2 className='title is-6'>ERRORES DE DATOS</h2>
-            <h4 className='title is-4'>~12% tasa de error</h4>
+            <h3 className='title is-4'>~12% tasa de error</h3>
           </div>
         </div>
         <div className='column'>
@@ -41,7 +41,7 @@ export default function Transformation() {
               <Icon icon={<FontAwesomeIcon icon={faArrowTrendUp} />} />
             </button>
             <h2 className='title is-6'>EFICIENCIA OPERATIVA</h2>
-            <h4 className='title is-4'>40% del tiempo en tareas manuales</h4>
+            <h3 className='title is-4'>40% del tiempo en tareas manuales</h3>
           </div>
         </div>
       </div>
@@ -60,7 +60,7 @@ export default function Transformation() {
               <Icon icon={<FontAwesomeIcon icon={faRocket} />} />
             </button>
             <h2 className='title is-6'>TIEMPO DE REPORTE</h2>
-            <h4 className='title is-4 has-text-success'>3 segundos</h4>
+            <h3 className='title is-4 has-text-success'>3 segundos</h3>
             <span className='tag is-success'>
               <Icon
                 text='99.9% más rápido'
@@ -78,9 +78,9 @@ export default function Transformation() {
               <Icon icon={<FontAwesomeIcon icon={faShieldDog} />} />
             </button>
             <h2 className='title is-6'>ERRORES DE DATOS</h2>
-            <h4 className='title is-4 has-text-success'>
+            <h3 className='title is-4 has-text-success'>
               {'< 0.01% tasa de error'}
-            </h4>
+            </h3>
             <span className='tag is-success'>
               <Icon
                 text='Eliminación total'
@@ -98,9 +98,9 @@ export default function Transformation() {
               <Icon icon={<FontAwesomeIcon icon={faCheckCircle} />} />
             </button>
             <h2 className='title is-6'>EFICIENCIA OPERATIVA</h2>
-            <h4 className='title is-4 has-text-success'>
+            <h3 className='title is-4 has-text-success'>
               Automatización del 95%
-            </h4>
+            </h3>
             <span className='tag is-success'>
               <Icon
                 text='+300% productividad'
@@ -130,10 +130,10 @@ export default function Transformation() {
             <h2 className='title is-3'>
               Antes vs. Después: el impacto es medible
             </h2>
-            <h4 className='title is-6'>
+            <h3 className='title is-6'>
               Mira como cambia la operación de tu empresa cuando reemplazas
               procesos manuales con software profesional.
-            </h4>
+            </h3>
           </div>
         </div>
         <div className='tabs is-toggle is-centered'>
@@ -146,7 +146,8 @@ export default function Transformation() {
             </li>
           </ul>
         </div>
-        {activeTab === 'before' ? <BeforeBento /> : <AfterBento />}
+        <div className={activeTab === 'before' ? '' : 'is-hidden'}><BeforeBento /></div>
+        <div className={activeTab === 'after' ? '' : 'is-hidden'}><AfterBento /></div>
         <div className='box'>
           En base a datos extraídos desde nuestros clientes
         </div>

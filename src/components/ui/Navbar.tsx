@@ -23,8 +23,9 @@ export default function Navbar() {
                 width={60}
                 height={60}
                 style={{ maxHeight: 'none' }}
+                loading='eager'
               />
-              <h1 className='title is-2'>Bits & Code</h1>
+              <h2 className='title is-2'>Bits & Code</h2>
             </div>
             <a
               role='button'

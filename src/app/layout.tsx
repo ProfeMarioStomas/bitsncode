@@ -5,20 +5,46 @@ import './globals.css';
 library.add(fas);
 
 export const metadata: Metadata = {
-  title: 'Bits & Code | Consultor Freelance Full-Stack TypeScript',
-  description:
-    'Programador Senior con más de 15 años de experiencia y profesor universitario. Especializado en arquitecturas robustas, Java, TypeScript y diseño de software avanzado.',
+  title: 'Bits & Code | Software Factory',
+  description: 'Software profesional para empresas que ya no caben en un Excel',
   metadataBase: new URL('https://bitsncode.dev'),
+  icons: {
+    icon: '/favicon.svg',
+    apple: [
+          { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+        ]
+  },
+  appleWebApp: {
+    capable: true,
+    title: 'Bits & Code',
+    statusBarStyle: 'black-translucent',
+  },
   alternates: {
     canonical: 'https://bitsncode.dev',
   },
   openGraph: {
-    title: 'Bits & Code | Consultor Freelance Full-Stack TypeScript',
+    title: 'Bits & Code | Software Factory',
     description:
-      '15+ años en Java/TypeScript. Enfoque directo y resultados de alto impacto.',
+      'Software profesional para empresas que ya no caben en un Excel',
     url: 'https://bitsncode.dev',
     siteName: 'Bits & Code',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Bits & Code | Software Factory',
+      },
+    ],
+    locale: 'es_CL',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Bits & Code',
+    description:
+      'Software profesional para empresas que ya no caben en un Excel',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -31,15 +57,7 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
     },
   },
-  keywords: [
-    'consultor java',
-    'typescript senior',
-    'patrones de diseño',
-    'arquitecturas escalables',
-    'devops',
-    'consultoría software',
-    'profesor programación',
-  ],
+  keywords: ['software factory', 'consultoría software'],
 };
 
 export const viewport: Viewport = {
@@ -53,29 +71,78 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className='has-navbar-fixed-top'>
+    <html lang='es' className='has-navbar-fixed-top'>
       <head>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.svg' type='image/svg+xml'></link>
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'ProfessionalService',
-              name: 'Bits & Code | Consultor Freelance Full-Stack TypeScript',
-              description:
-                '15+ años en Java/TypeScript. Enfoque directo y resultados de alto impacto',
-              url: 'https://bitsncode.dev',
-              telephone: '+56968360950',
-              address: {
-                '@type': 'El Canelo 2652',
-                addressLocality: 'Iquique',
-                addressCountry: 'CL',
-              },
-              sameAs: [
-                'https://www.linkedin.com/in/mariocaresc/',
-                'https://github.com/ProfeMarioStomas',
+              '@graph': [
+                {
+                  '@type': 'ProfessionalService',
+                  '@id': 'https://bitsncode.dev/#organization',
+                  name: 'Bits & Code',
+                  description:
+                    'Software factory especializada en sistemas a medida, escalables y seguros para empresas que superaron las hojas de cálculo.',
+                  url: 'https://bitsncode.dev',
+                  telephone: '+56968360950',
+                  image: 'https://bitsncode.dev/og-image.png',
+                  publicAccess: false,
+                  logo: {
+                    '@type': 'ImageObject',
+                    url: 'https://bitsncode.dev/logo.svg',
+                  },
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Iquique',
+                    addressRegion: 'Tarapacá',
+                    addressCountry: 'CL',
+                  },
+                  geo: {
+                    '@type': 'GeoCoordinates',
+                    latitude: -20.2307,
+                    longitude: -70.1357,
+                  },
+                  areaServed: [
+                    { '@type': 'Country', name: 'Chile' },
+                    { '@type': 'City', name: 'Santiago' },
+                  ],
+                  priceRange: '$$',
+                  openingHoursSpecification: {
+                    '@type': 'OpeningHoursSpecification',
+                    dayOfWeek: [
+                      'Monday',
+                      'Tuesday',
+                      'Wednesday',
+                      'Thursday',
+                      'Friday',
+                    ],
+                    opens: '09:00',
+                    closes: '18:00',
+                  },
+                },
+                {
+                  '@type': 'Person',
+                  '@id': 'https://bitsncode.dev/#person',
+                  name: 'Mario Cares',
+                  jobTitle: 'Consultor Senior & Arquitecto de Software',
+                  url: 'https://bitsncode.dev',
+                  worksFor: { '@id': 'https://bitsncode.dev/#organization' },
+                  knowsAbout: [
+                    'Software Architecture',
+                    'TypeScript',
+                    'Java',
+                    'Clean Architecture',
+                    'Design Patterns',
+                    'Enterprise Integration Patterns',
+                  ],
+                  sameAs: [
+                    'https://www.linkedin.com/in/mariocaresc/',
+                    'https://github.com/ProfeMarioStomas',
+                  ],
+                },
               ],
             }),
           }}

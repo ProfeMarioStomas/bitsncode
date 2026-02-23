@@ -1,38 +1,55 @@
-@import "bulma/css/versions/bulma-no-dark-mode.css";
+@import 'bulma/css/bulma.css';
 
 /*
  * Fix para Font Awesome y Bulma
  * Sobrescribe estilos que Bulma aplica a los SVG.
  */
 .svg-inline--fa {
-    /* Restaura la altura necesaria para que el ícono sea visible */
-    height: 1em;
+  /* Restaura la altura necesaria para que el ícono sea visible */
+  height: 1em;
 
-    /* Asegura que no haya un ancho máximo que lo comprima */
-    max-width: 100%;
+  /* Asegura que no haya un ancho máximo que lo comprima */
+  max-width: 100%;
 
-    /* Corrige la alineación vertical, Bulma a veces la interfiere */
-    vertical-align: -0.125em;
+  /* Corrige la alineación vertical, Bulma a veces la interfiere */
+  vertical-align: -0.125em;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .dropdown {
-    width: 100%;
+  width: 100%;
 }
 
 .dropdown-trigger {
-    width: 100%;
+  width: 100%;
 }
 
 .dropdown-trigger .button {
-    display: flex; /* To ensure the button content spreads evenly */
-    width: 100%;
-    justify-content: space-between; /* To push the icon to the right */
+  display: flex; /* To ensure the button content spreads evenly */
+  width: 100%;
+  justify-content: space-between; /* To push the icon to the right */
 }
 
 .dropdown-menu {
-    width: 100%; /* Ensures the dropdown content also fills the width */
+  width: 100%; /* Ensures the dropdown content also fills the width */
+}
+
+.bordered-icon-success {
+  border: 1px solid hsl(153, 53%, 53%);
+  padding: 0.5em; /* Add padding around the icon */
+  border-radius: 0.25em; /* Optional: adds rounded corners */
+  display: inline-block; /* Ensures the span wraps the icon correctly */
+}
+
+.columns.is-equal-height > .column > * {
+  height: 100%;
+}
+
+.tabs.is-toggle li.is-active a {
+background-color: hsl(153, 53%, 53%);
+border-color: hsl(153, 53%, 53%);
+z-index: 1;
 }

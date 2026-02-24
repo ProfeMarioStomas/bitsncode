@@ -38,11 +38,9 @@ export default function Faq() {
           />
         </button>
       </header>
-      {currentFaq === id && (
-        <div className='card-content'>
-          <div className='content'>{children}</div>
-        </div>
-      )}
+      <div className={`card-content ${currentFaq === id ? '' : 'is-hidden'}`}>
+        <div className='content'>{children}</div>
+      </div>
     </div>
   );
 
@@ -61,10 +59,10 @@ export default function Faq() {
               />
             </button>
             <h2 className='title is-3'>Preguntas frecuentes</h2>
-            <h4 className='title is-6'>
+            <h3 className='title is-6'>
               Todo lo que necesitas saber sobre seguridad de datos, migración
               desde Excel y el proceso de implementación.
-            </h4>
+            </h3>
           </div>
         </div>
       </div>
@@ -95,7 +93,7 @@ export default function Faq() {
       </Card>
       <Card id='3' title='¿Cuánto tiempo toma implementar mi sistema?'>
         <p>
-          Depende de la complejidad, pero la mayoría de nuestros clientes estan
+          Depende de la complejidad, pero la mayoría de nuestros clientes están
           operando con su primer módulo en{' '}
           <span className='has-text-weight-bold'>4-6 semanas</span>. Trabajamos
           con metodología ágil, así que empiezas a ver resultados desde la{' '}

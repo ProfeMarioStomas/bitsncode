@@ -6,6 +6,7 @@ import { faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons';
 import { ChangeEvent, FormEvent, useState } from 'react';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 type TFormData = {
   name: string;
@@ -133,6 +134,14 @@ export default function ContactForm({ HCAPTCHA_SITE_KEY }: TContactFormProps) {
         </div>
         <div className='field'>
           <HCaptcha sitekey={HCAPTCHA_SITE_KEY} onVerify={setHcaptchaToken} />
+        </div>
+        <div className="field">
+          <div className="control">
+            <label className="checkbox">
+              <input type="checkbox" />
+              Acepto la <Link href="/privacy">Política de Privacidad</Link>
+            </label>
+          </div>
         </div>
         <button
           type='submit'

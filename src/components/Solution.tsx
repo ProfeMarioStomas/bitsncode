@@ -30,10 +30,10 @@ export default function Solution() {
             <h2 className='title is-3'>
               Un motor central para toda tu operación
             </h2>
-            <h4 className='title is-6'>
+            <h3 className='title is-6'>
               Arquitectura moderna, segura y escalable que reemplaza tus
               herramientas fragmentadas por un sistema unificado.
-            </h4>
+            </h3>
           </div>
         </div>
       </div>

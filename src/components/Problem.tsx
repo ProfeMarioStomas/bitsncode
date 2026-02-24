@@ -25,10 +25,10 @@ export default function Problem() {
             <h2 className='title is-3'>
               Tu crecimiento está limitado por herramientas que no escalan
             </h2>
-            <h4 className='title is-6'>
+            <h3 className='title is-6'>
               Las hojas de cálculo y herramientas legacy funcionaron al inicio,
               pero ahora son el cuello de botella de tu crecimiento.
-            </h4>
+            </h3>
           </div>
         </div>
       </div>
@@ -92,8 +92,8 @@ export default function Problem() {
             <h2 className='title is-4'>Falta de visibilidad en tiempo real</h2>
             <p>
               Cuando necesitas un reporte actualizado, alguien tiene que
-              consolidar datos manualmente. Para cuando esta listo, la
-              información ya esta desactualizada.
+              consolidar datos manualmente. Para cuando está listo, la
+              información ya está desactualizada.
             </p>
             <blockquote className='is-italic'>
               Tomar decisiones con datos de hace una semana no es operar en

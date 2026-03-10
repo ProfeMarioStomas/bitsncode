@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Software profesional para empresas que ya no caben en un Excel',
   metadataBase: new URL('https://bitsncode.dev'),
   icons: {
-    icon: '/favicon.svg',
+    icon: '/favicon.ico',
     apple: [
           { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
         ]
@@ -73,7 +73,6 @@ export default function RootLayout({
   return (
     <html lang='es' className='has-navbar-fixed-top'>
       <head>
-        <link rel='icon' href='/favicon.ico' type='image/svg+xml'></link>
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{

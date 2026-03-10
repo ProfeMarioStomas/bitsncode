@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Icon from './Icon';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faMapPin, faVoicemail } from '@fortawesome/free-solid-svg-icons';
+import { faMapPin } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 export default function Footer() {
@@ -30,15 +30,24 @@ export default function Footer() {
                   </p>
                 </div>
               </div>
-              <p>
-                Liderado por un Ingeniero Informático con +15 años de
-                experiencia y docente universitario en distintas áreas. En{' '}
-                <span className='has-text-weight-bold has-text-success'>
-                  Bits & Code
-                </span>{' '}
-                no solo escribimos código; diseñamos activos digitales de alta
-                resiliencia.
-              </p>
+              <div className='is-flex is-flex-direction-row is-align-items-center mb-3' style={{ gap: '1rem' }}>
+                <Image
+                  src='/founder.png'
+                  alt='Mario Cares — Fundador Bits & Code'
+                  width={64}
+                  height={64}
+                  style={{ borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }}
+                />
+                <p>
+                  Liderado por un Ingeniero Informático con +15 años de
+                  experiencia y docente universitario en distintas áreas. En{' '}
+                  <span className='has-text-weight-bold has-text-success'>
+                    Bits & Code
+                  </span>{' '}
+                  no solo escribimos código; diseñamos activos digitales de alta
+                  resiliencia.
+                </p>
+              </div>
               <h4 className='title is-5'>Otros medios de contacto</h4>
               <div>
                 <a className='button is-rounded' href='tel:+56958360950'>
@@ -73,16 +82,6 @@ export default function Footer() {
                     icon={<FontAwesomeIcon icon={faLinkedin} />}
                   />
                 </a>
-              </div>
-              <div className='content has-text-right'>
-                <Link href='https://bulma.io' target='_blank'>
-                  <Image
-                    src='https://bulma.io/assets/images/made-with-bulma.png'
-                    alt='Made with Bulma'
-                    width={128}
-                    height={24}
-                  />
-                </Link>
               </div>
             </div>
           </div>

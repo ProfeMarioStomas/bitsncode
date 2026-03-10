@@ -15,7 +15,7 @@ import Icon from './ui/Icon';
 export default function Solution() {
   return (
     <section className='section container' id='solution'>
-      <div className='content pt-6 has-text-centered'>
+      <div className='content pt-4 has-text-centered'>
         <div className='columns is-centered'>
           <div className='column is-two-thirds'>
             <button
@@ -119,7 +119,7 @@ export default function Solution() {
               <p>Roles y permisos granulares para cada miembro de tu equipo.</p>
             </div>
           </div>
-          <div className='cell'>
+          <div className='cell is-flex'>
             <div className='box'>
               <span className='icon is-large has-text-success bordered-icon-success mb-3'>
                 <FontAwesomeIcon icon={faUserLock} style={{ height: 'auto' }} />

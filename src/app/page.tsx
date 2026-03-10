@@ -1,7 +1,8 @@
-import { Problem, Solution, Transformation, Contact, Faq } from '@/components';
+import { Problem, Solution, Transformation, Contact, Faq, SocialProof, TechStack } from '@/components';
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
 import Icon from '@/components/ui/Icon';
+import ScrollAnimations from '@/components/ui/ScrollAnimations';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faArrowRight,
@@ -12,14 +13,23 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <>
+      <ScrollAnimations />
       <Navbar />
-      <section className='hero is-fullheight-with-navbar'>
+      <section
+        className='hero is-fullheight-with-navbar'
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url("/hero_background.png")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <div className='hero-body' style={{ alignItems: 'stretch' }}>
           <div className='container has-text-centered'>
             <div className='columns is-centered' style={{ height: '100%' }}>
               <div className='column is-two-thirds is-flex is-flex-direction-column is-justify-content-space-between'>
                 <button
-                  className='button is-primary is-rounded is-outlined'
+                  className='button is-success is-rounded is-inverted'
                   style={{ alignSelf: 'center' }}
                 >
                   <Icon
@@ -35,6 +45,16 @@ export default function Home() {
                   atrás las hojas de cálculo para que tu empresa opere con la
                   velocidad y confianza que necesita.
                 </h2>
+                <Link
+                  className='button is-success is-rounded is-medium'
+                  href='/#contact'
+                  style={{ alignSelf: 'center' }}
+                >
+                  <span className='icon-text'>
+                    <span>Agenda tu demo gratuita</span>
+                    <Icon icon={<FontAwesomeIcon icon={faArrowRight} />} />
+                  </span>
+                </Link>
                 <nav className='level box'>
                   <div className='level-item has-text-centered'>
                     <div>
@@ -66,8 +86,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <SocialProof />
       <Problem />
       <Solution />
+      <TechStack />
       <Transformation />
       <Faq />
       <section className='section container'>

@@ -3,3 +3,5 @@ export { default as Solution } from './Solution';
 export { default as Transformation } from './Transformation';
 export { default as Contact } from './Contact';
 export { default as Faq } from './Faq';
+export { default as SocialProof } from './SocialProof';
+export { default as TechStack } from './TechStack';

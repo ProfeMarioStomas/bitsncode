@@ -46,7 +46,7 @@ export default function Faq() {
 
   return (
     <section className='section container' id='faq'>
-      <div className='content pt-6 has-text-centered'>
+      <div className='content pt-4 has-text-centered'>
         <div className='columns is-centered'>
           <div className='column is-two-thirds'>
             <button

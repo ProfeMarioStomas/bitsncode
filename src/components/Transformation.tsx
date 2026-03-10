@@ -114,8 +114,9 @@ export default function Transformation() {
   };
 
   return (
-    <section className='section container' id='transformation'>
-      <div className='content pt-6 has-text-centered'>
+    <section className='section section-alt' id='transformation'>
+      <div className='container'>
+      <div className='content pt-4 has-text-centered'>
         <div className='columns is-centered'>
           <div className='column is-two-thirds'>
             <button
@@ -148,7 +149,7 @@ export default function Transformation() {
         </div>
         <div className={activeTab === 'before' ? '' : 'is-hidden'}><BeforeBento /></div>
         <div className={activeTab === 'after' ? '' : 'is-hidden'}><AfterBento /></div>
-        <div className='box'>
+        <div className='box mt-4 mb-4'>
           En base a datos extraídos desde nuestros clientes
         </div>
       </div>
@@ -175,6 +176,7 @@ export default function Transformation() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

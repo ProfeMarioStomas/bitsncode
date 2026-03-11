@@ -22,14 +22,14 @@ export default function Contact() {
           <h4 className='title is-3'>
             ¿Algo en lo que necesites apoyo? Escríbeme!
           </h4>
-          {HCAPTCHA_SITE_KEY ? (
-            <ContactForm HCAPTCHA_SITE_KEY={HCAPTCHA_SITE_KEY} />
-          ) : (
-            <div className='information is-danger is-light'>
-              Formulario deshabilitado momentáneamente
-            </div>
-          )}
         </div>
+        {HCAPTCHA_SITE_KEY ? (
+          <ContactForm HCAPTCHA_SITE_KEY={HCAPTCHA_SITE_KEY} />
+        ) : (
+          <div className='information is-danger is-light'>
+            Formulario deshabilitado momentáneamente
+          </div>
+        )}
       </div>
     </section>
   );

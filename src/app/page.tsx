@@ -103,25 +103,24 @@ export default function Home() {
                 </span>
               </h2>
               <h3 className='title is-6 has-text-centered'>
-                Agenda una llamada de 30 minutos. Entienda cómo Bits & Code
+                Agenda una llamada de 30 minutos. Descubre cómo Bits & Code
                 puede escalar su infraestructura antes de tomar una decisión.
               </h3>
-              <div className='is-flex is-flex-direction-row is-align-items-center is-justify-content-center'>
-                <Link
-                  className='button is-success is-rounded mr-3'
-                  style={{ display: 'inline' }}
-                  href="/#contact"
-                >
-                  <span className='icon-text'>
-                    <span>Agenda una demo gratuita</span>
-                    <Icon icon={<FontAwesomeIcon icon={faArrowRight} />} />
+              <Link
+                className='button is-success is-rounded is-fullwidth is-large'
+                href="/#contact"
+              >
+                <span className='icon-text'>
+                  <span>Agenda una demo gratuita</span>
+                  <span className='icon'>
+                    <FontAwesomeIcon icon={faArrowRight} />
                   </span>
-                </Link>
-                <p>
-                  Evaluación inicial{' '}
-                  <span className='has-text-weight-bold'>sin compromiso</span>.
-                </p>
-              </div>
+                </span>
+              </Link>
+              <p className='has-text-centered mt-2'>
+                Evaluación inicial{' '}
+                <span className='has-text-weight-bold'>sin compromiso</span>.
+              </p>
             </div>
           </div>
         </div>

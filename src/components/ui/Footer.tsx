@@ -3,8 +3,15 @@ import Image from 'next/image';
 import Icon from './Icon';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faMapPin } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowTrendUp,
+  faCircleExclamation,
+  faCircleQuestion,
+  faMapPin,
+  faPeopleArrows,
+} from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faFileContract } from '@fortawesome/free-solid-svg-icons/faFileContract';
 
 export default function Footer() {
   return (
@@ -30,13 +37,20 @@ export default function Footer() {
                   </p>
                 </div>
               </div>
-              <div className='is-flex is-flex-direction-row is-align-items-center mb-3' style={{ gap: '1rem' }}>
+              <div
+                className='is-flex is-flex-direction-row is-align-items-center mb-3'
+                style={{ gap: '1rem' }}
+              >
                 <Image
                   src='/founder.png'
                   alt='Mario Cares — Fundador Bits & Code'
                   width={64}
                   height={64}
-                  style={{ borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }}
+                  style={{
+                    borderRadius: '50%',
+                    objectFit: 'cover',
+                    flexShrink: 0,
+                  }}
                 />
                 <p>
                   Liderado por un Ingeniero Informático con +15 años de
@@ -58,7 +72,10 @@ export default function Footer() {
                 </a>
               </div>
               <div>
-                <a className='button is-rounded' href='mailto:hola@bitsncode.dev'>
+                <a
+                  className='button is-rounded'
+                  href='mailto:hola@bitsncode.dev'
+                >
                   <Icon
                     text='hola@bitsncode.dev'
                     icon={<FontAwesomeIcon icon={faEnvelope} />}
@@ -90,7 +107,44 @@ export default function Footer() {
               <h3 className='title is-4'>Sitio</h3>
               <ul>
                 <li>
-                  <Link href='/privacy'>Política de Privacidad</Link>
+                  <Link href='/privacy'>
+                    <Icon
+                      text='Política de Privacidad'
+                      icon={<FontAwesomeIcon icon={faFileContract} />}
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/#problem'>
+                    <Icon
+                      text='Problema'
+                      icon={<FontAwesomeIcon icon={faCircleExclamation} />}
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/#solution'>
+                    <Icon
+                      text='Solución'
+                      icon={<FontAwesomeIcon icon={faPeopleArrows} />}
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/#transformation'>
+                    <Icon
+                      text='Transformación'
+                      icon={<FontAwesomeIcon icon={faArrowTrendUp} />}
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/#'>
+                    <Icon
+                      text='FAQ'
+                      icon={<FontAwesomeIcon icon={faCircleQuestion} />}
+                    />
+                  </Link>
                 </li>
               </ul>
             </div>
